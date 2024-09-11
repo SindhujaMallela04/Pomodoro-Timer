@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #ea8f76, #cde981, #fbc2eb, #a18cd1);
+    background-size: 300% 300%;
+    animation: moveBackground 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Allows absolutely positioned elements to be positioned relative to the body */
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    position: absolute; /* Position the container absolutely on the background */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3); /* More transparency to blend with the background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.settings label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.settings input {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.timer {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start {
+    background-color: #28a745;
+    color: white;
+}
+
+#pause {
+    background-color: #ffc107;
+    color: white;
+}
+
+#reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+.controls button:hover {
+    opacity: 0.8;
+}
